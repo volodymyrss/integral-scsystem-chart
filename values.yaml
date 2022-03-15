@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: odahub/integralhk
+  repository: odahub/integral-scsystem
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -51,7 +51,7 @@ ingress:
     ingress.kubernetes.io/proxy-body-size: 50m
 
   hosts:
-    - host: integralhk.obsuks1.unige.ch
+    - host: integral-scsystem.obsuks1.unige.ch
       paths:
         - path: /
           pathType: ImplementationSpecific
@@ -97,7 +97,7 @@ isdc_verso:
     pvphase_nrt_ops: pvphase/nrt/ops
 
 
-pv_suffix: hk
+pv_suffix: scsystem
 
 oda:
   archive_readonly: true
